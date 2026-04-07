@@ -1,0 +1,42 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "back": "Back",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "yes": "Yes",
+    "no": "No",
+    "offline": "No internet connection",
+    "errorTitle": "Oops! Something went wrong",
+    "errorMessage": "An unexpected error occurred."
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password",
+    "invalidEmail": "Invalid email address",
+    "passwordMinLength": "At least 6 characters required",
+    "loginError": "Incorrect email or password",
+    "noAccount": "Don't have an account?"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Connection error. Check your internet.",
+    "unauthorized": "Session expired. Please sign in again.",
+    "notFound": "Resource not found."
+  },
+  "pages": {
+    "home": "Home",
+    "more": "More",
+    "moreDescription": "Additional options and settings."
+  }
+}

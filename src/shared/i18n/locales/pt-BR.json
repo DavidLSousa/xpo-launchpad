@@ -1,0 +1,42 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "back": "Voltar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "yes": "Sim",
+    "no": "Não",
+    "offline": "Sem conexão com a internet",
+    "errorTitle": "Ops! Algo deu errado",
+    "errorMessage": "Ocorreu um erro inesperado."
+  },
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "forgotPassword": "Esqueci minha senha",
+    "invalidEmail": "E-mail inválido, formate corretamente",
+    "passwordMinLength": "No mínimo 6 caracteres",
+    "loginError": "E-mail ou senha incorretos",
+    "noAccount": "Não tem uma conta?"
+  },
+  "errors": {
+    "generic": "Algo deu errado. Tente novamente.",
+    "network": "Erro de conexão. Verifique sua internet.",
+    "unauthorized": "Sessão expirada. Faça login novamente.",
+    "notFound": "Recurso não encontrado."
+  },
+  "pages": {
+    "home": "Início",
+    "more": "Mais",
+    "moreDescription": "Opções adicionais e configurações."
+  }
+}
