@@ -114,11 +114,23 @@ run-a:
 	@npx expo run:android --device
 
 # ============================================
-# Dependências (Yarn)
+# Testes
+# ============================================
+
+test:
+	@npx jest
+
+
+
+# ============================================
+# Dependências (Yarn / Expo)
 # ============================================
 
 install:
 	@yarn install
+
+fix-deps:
+	@npx expo install --fix
 
 add:
 	@yarn add $(PKG)
@@ -134,10 +146,3 @@ audit-fix:
 
 audit-force:
 	@yarn audit --force
-
-# ============================================
-# Testes
-# ============================================
-
-test:
-	@npx jest
