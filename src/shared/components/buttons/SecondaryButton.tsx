@@ -1,9 +1,9 @@
-import { AppColors, Colors } from "@/src/shared/constants/Colors";
-import { Spacing } from "@/src/shared/constants/Spacing";
-import { Typography } from "@/src/shared/constants/Typography";
-import { useI18nContext, useThemeContext } from "@/src/shared/context";
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { AppColors, Colors } from '@/src/shared/constants/Colors';
+import { Spacing } from '@/src/shared/constants/Spacing';
+import { Typography } from '@/src/shared/constants/Typography';
+import { useI18nContext, useThemeContext } from '@/src/shared/context';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface SecondaryButtonProps {
   onPress: () => void;
@@ -28,7 +28,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   if (isCreateAccount) {
     return (
       <View style={styles.container}>
-        <Text style={styles.noAccountText}>{t("login.noAccount")}</Text>
+        <Text style={styles.noAccountText}>{t('login.noAccount')}</Text>
         <TouchableOpacity onPress={onPress}>
           <Text style={styles.createText}>{title} →</Text>
         </TouchableOpacity>
@@ -48,9 +48,9 @@ export default SecondaryButton;
 const getStyles = (colors: AppColors, textColor: string | undefined) =>
   StyleSheet.create({
     container: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
       paddingVertical: Spacing.lg,
       marginBottom: Spacing.lg,
     },

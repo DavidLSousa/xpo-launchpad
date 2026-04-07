@@ -1,8 +1,8 @@
-import { Colors } from "@/src/shared/constants/Colors";
-import { Spacing } from "@/src/shared/constants/Spacing";
-import { useThemeContext } from "@/src/shared/context";
-import React from "react";
-import { StyleProp, Text, TextStyle } from "react-native";
+import { Colors } from '@/src/shared/constants/Colors';
+import { Spacing } from '@/src/shared/constants/Spacing';
+import { useThemeContext } from '@/src/shared/context';
+import React from 'react';
+import { StyleProp, Text, TextStyle } from 'react-native';
 
 type ErrorInlineProps = {
   message?: string | null;
@@ -20,7 +20,7 @@ const ErrorInline: React.FC<ErrorInlineProps> = ({ message, style }) => {
       style={[
         {
           color: colors.expense,
-          textAlign: "center",
+          textAlign: 'center',
           marginBottom: Spacing.lg,
         },
         style,

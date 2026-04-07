@@ -1,5 +1,5 @@
-import { Colors } from "@/src/shared/constants";
-import React from "react";
+import { Colors } from '@/src/shared/constants';
+import React from 'react';
 import {
   KeyboardAvoidingView,
   Platform,
@@ -7,17 +7,14 @@ import {
   ScrollViewProps,
   View,
   ViewProps,
-} from "react-native";
-import {
-  SafeAreaView,
-  useSafeAreaInsets,
-} from "react-native-safe-area-context";
-import { useThemeContext } from "../context/useThemeContext";
+} from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useThemeContext } from '../../context/useThemeContext';
 
 interface BasePageProps extends ViewProps {
   children: React.ReactNode;
   scrollable?: boolean;
-  contentContainerStyle?: ScrollViewProps["contentContainerStyle"];
+  contentContainerStyle?: ScrollViewProps['contentContainerStyle'];
   /** Space buffer usually needed when using an absolute bottom tab bar. Default is padding based on safe area. */
   withBottomInset?: boolean;
   spacingBottom?: number;
@@ -45,7 +42,7 @@ export default function BasePage({
     <View
       style={[
         {
-          flexDirection: "column",
+          flexDirection: 'column',
           flex: 1, // Fixes empty layout collapse when using absolute fill
           paddingBottom: withBottomInset ? insets.bottom + spacingBottom : 0,
           paddingTop: withTopInset ? 80 : 0,
@@ -61,16 +58,12 @@ export default function BasePage({
     return (
       <View style={[{ backgroundColor: colors.background, flex: 1 }, style]}>
         <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : undefined}
+          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
           style={{ flex: 1 }}
         >
           <SafeAreaView
             style={{ flex: 1 }}
-            edges={
-              absoluteHeader || withTopInset
-                ? ["left", "right"]
-                : ["top", "left", "right"]
-            }
+            edges={absoluteHeader || withTopInset ? ['left', 'right'] : ['top', 'left', 'right']}
           >
             {innerContent}
           </SafeAreaView>
@@ -91,11 +84,7 @@ export default function BasePage({
       >
         <SafeAreaView
           style={{ flex: 1 }}
-          edges={
-            absoluteHeader || withTopInset
-              ? ["left", "right"]
-              : ["top", "left", "right"]
-          }
+          edges={absoluteHeader || withTopInset ? ['left', 'right'] : ['top', 'left', 'right']}
         >
           {innerContent}
         </SafeAreaView>

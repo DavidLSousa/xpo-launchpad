@@ -4,8 +4,7 @@ import { QueryProvider } from '@/src/shared/context/QueryProvider';
 // import { AuthProvider } from '@/src/modules/auth/context/AuthContext';
 import { ThemeProvider } from '@/src/shared/context/useThemeContext';
 import { I18nProvider } from '@/src/shared/context/I18nProvider';
-import ErrorBoundary from '@/src/shared/components/ErrorBoundary';
-import OfflineBanner from '@/src/shared/components/OfflineBanner';
+import { ErrorBoundary, OfflineBanner } from '@/src/shared/components';
 
 export default function RootLayout() {
   return (

@@ -1,5 +1,5 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { I18n, TranslateOptions } from "i18n-js";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { I18n, TranslateOptions } from 'i18n-js';
 import React, {
   createContext,
   ReactNode,
@@ -8,14 +8,14 @@ import React, {
   useState,
   useCallback,
   useMemo,
-} from "react";
+} from 'react';
 
-import en from "@/src/shared/i18n/locales/en-US.json";
-import pt from "@/src/shared/i18n/locales/pt-BR.json";
-import { ImageSourcePropType } from "react-native";
-import { STORAGE_KEYS } from "../constants";
+import en from '@/src/shared/i18n/locales/en-US.json';
+import pt from '@/src/shared/i18n/locales/pt-BR.json';
+import { ImageSourcePropType } from 'react-native';
+import { STORAGE_KEYS } from '../constants';
 
-const defaultLocale = "pt";
+const defaultLocale = 'pt';
 
 const i18n = new I18n({ en, pt });
 i18n.locale = defaultLocale;
@@ -41,19 +41,19 @@ interface LocaleProviderProps {
 
 export const LANGUAGES = [
   {
-    code: "pt",
-    name: "Português",
-    flag: require("@/assets/images/i18n/br_flag.png"),
+    code: 'pt',
+    name: 'Português',
+    flag: require('@/assets/images/i18n/br_flag.png'),
   },
   {
-    code: "en",
-    name: "English",
-    flag: require("@/assets/images/i18n/us_flag.png"),
+    code: 'en',
+    name: 'English',
+    flag: require('@/assets/images/i18n/us_flag.png'),
   },
   {
-    code: "es",
-    name: "Español",
-    flag: require("@/assets/images/i18n/es_flag.png"),
+    code: 'es',
+    name: 'Español',
+    flag: require('@/assets/images/i18n/es_flag.png'),
   },
 ];
 
@@ -102,15 +102,13 @@ export const I18nProvider = ({ children }: LocaleProviderProps) => {
     [languages, locale, setLocale, t],
   );
 
-  return (
-    <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>
-  );
+  return <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>;
 };
 
 export const useI18nContext = () => {
   const context = useContext(I18nContext);
   if (!context) {
-    throw new Error("useI18nContext must be used within a LocaleProvider");
+    throw new Error('useI18nContext must be used within a LocaleProvider');
   }
   return context;
 };

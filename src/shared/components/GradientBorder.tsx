@@ -1,8 +1,8 @@
-import { BorderRadius, Colors, Spacing } from "@/src/shared/constants";
-import { useThemeContext } from "@/src/shared/context";
-import { LinearGradient } from "expo-linear-gradient";
-import React from "react";
-import { StyleProp, ViewStyle } from "react-native";
+import { BorderRadius, Colors, Spacing } from '@/src/shared/constants';
+import { useThemeContext } from '@/src/shared/context';
+import { LinearGradient } from 'expo-linear-gradient';
+import React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 
 interface GradientBorderProps {
   children: React.ReactNode;

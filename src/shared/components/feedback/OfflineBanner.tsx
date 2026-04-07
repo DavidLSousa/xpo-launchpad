@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { StyleSheet, Text, Animated, View } from "react-native";
-import NetInfo from "@react-native-community/netinfo";
-import { Colors, Spacing, Typography } from "@/src/shared/constants";
-import { useI18nContext, useThemeContext } from "@/src/shared/context";
-import { WifiOff } from "lucide-react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import React, { useEffect, useRef } from 'react';
+import { StyleSheet, Text, Animated, View } from 'react-native';
+import NetInfo from '@react-native-community/netinfo';
+import { Colors, Spacing, Typography } from '@/src/shared/constants';
+import { useI18nContext, useThemeContext } from '@/src/shared/context';
+import { WifiOff } from 'lucide-react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const OfflineBanner: React.FC = () => {
   const { theme } = useThemeContext();
@@ -41,7 +41,7 @@ const OfflineBanner: React.FC = () => {
     >
       <View style={styles.content}>
         <WifiOff size={16} color="#FFFFFF" />
-        <Text style={styles.text}>{t("common.offline")}</Text>
+        <Text style={styles.text}>{t('common.offline')}</Text>
       </View>
     </Animated.View>
   );
@@ -49,29 +49,29 @@ const OfflineBanner: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     zIndex: 9999,
     paddingBottom: Spacing.xs,
     elevation: 5,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
   },
   content: {
     height: 40,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
     gap: Spacing.sm,
   },
   text: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
     fontSize: Typography.p,
-    fontWeight: "600",
+    fontWeight: '600',
   },
 });
 

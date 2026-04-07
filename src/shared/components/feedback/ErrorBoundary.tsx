@@ -1,9 +1,9 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import { Colors, Spacing, Typography } from "../constants";
-import { useI18nContext, useThemeContext } from "@/src/shared/context";
-import { AlertTriangle } from "lucide-react-native";
-import PrimaryButton from "./PrimaryButton";
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { Colors, Spacing, Typography } from '../../constants';
+import { useI18nContext, useThemeContext } from '../../context';
+import { AlertTriangle } from 'lucide-react-native';
+import PrimaryButton from '../buttons/PrimaryButton';
 
 interface ErrorFallbackProps {
   error: Error | null;
@@ -16,22 +16,12 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, onReset }) => {
   const { t } = useI18nContext();
 
   return (
-    <SafeAreaView
-      style={[styles.container, { backgroundColor: colors.background }]}
-    >
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       <View style={styles.content}>
         <AlertTriangle size={64} color={colors.expense} />
-        <Text style={[styles.title, { color: colors.text }]}>
-          {t("common.errorTitle")}
-        </Text>
-        <Text style={styles.message}>
-          {error?.message || t("common.errorMessage")}
-        </Text>
-        <PrimaryButton
-          title={t("common.retry")}
-          onPress={onReset}
-          marginH={Spacing.xl}
-        />
+        <Text style={[styles.title, { color: colors.text }]}>{t('common.errorTitle')}</Text>
+        <Text style={styles.message}>{error?.message || t('common.errorMessage')}</Text>
+        <PrimaryButton title={t('common.retry')} onPress={onReset} marginH={Spacing.xl} />
       </View>
     </SafeAreaView>
   );
@@ -58,7 +48,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to a service like Sentry here
-    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   handleReset = () => {
@@ -67,9 +57,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return (
-        <ErrorFallback error={this.state.error} onReset={this.handleReset} />
-      );
+      return <ErrorFallback error={this.state.error} onReset={this.handleReset} />;
     }
 
     return this.props.children;
@@ -82,22 +70,22 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     padding: Spacing.xl,
   },
   title: {
     fontSize: Typography.h4,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginTop: Spacing.lg,
-    textAlign: "center",
+    textAlign: 'center',
   },
   message: {
     fontSize: Typography.body,
-    textAlign: "center",
+    textAlign: 'center',
     marginTop: Spacing.sm,
     marginBottom: Spacing.xl,
-    color: "#666666",
+    color: '#666666',
   },
 });
 

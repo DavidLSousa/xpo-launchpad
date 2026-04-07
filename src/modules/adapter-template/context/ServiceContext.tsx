@@ -1,6 +1,6 @@
-import React, { createContext, useContext, ReactNode } from "react";
-import { IServiceProvider } from "../domain/interfaces/IServiceProvider";
-import { AxiosServiceAdapter } from "../adapters/AxiosServiceAdapter";
+import React, { createContext, useContext, ReactNode } from 'react';
+import { IServiceProvider } from '../domain/interfaces/IServiceProvider';
+import { AxiosServiceAdapter } from '../adapters/AxiosServiceAdapter';
 
 // Dependency Injection: Here you choose whether to use Axios, Fetch, Mock, etc.
 const serviceProvider: IServiceProvider = new AxiosServiceAdapter();
@@ -8,9 +8,7 @@ const serviceProvider: IServiceProvider = new AxiosServiceAdapter();
 const ServiceContext = createContext<IServiceProvider>(serviceProvider);
 
 export const ServiceProvider: React.FC<{ children: ReactNode }> = ({ children }) => (
-  <ServiceContext.Provider value={serviceProvider}>
-    {children}
-  </ServiceContext.Provider>
+  <ServiceContext.Provider value={serviceProvider}>{children}</ServiceContext.Provider>
 );
 
 export const useService = () => useContext(ServiceContext);

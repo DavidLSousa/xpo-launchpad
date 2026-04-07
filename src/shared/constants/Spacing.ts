@@ -26,13 +26,13 @@ export const Spacing = {
   maxWidth: 1200,
 
   absoluteBottomTabBarIOS: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 85,
     left: 0,
     right: 0,
   },
   absoluteBottomTabBarAndroid: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 95,
     left: 0,
     right: 0,

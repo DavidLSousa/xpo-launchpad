@@ -1,4 +1,4 @@
-import { Info } from "../models/Info";
+import { Info } from '../models/Info';
 
 export interface IServiceProvider {
   fetchData(): Promise<Info>;

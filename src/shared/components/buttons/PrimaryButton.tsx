@@ -6,16 +6,11 @@ import {
   Shadows,
   Spacing,
   Typography,
-} from "@/src/shared/constants";
-import { useThemeContext } from "@/src/shared/context";
-import { LinearGradient } from "expo-linear-gradient";
-import React from "react";
-import {
-  ActivityIndicator,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+} from '@/src/shared/constants';
+import { useThemeContext } from '@/src/shared/context';
+import { LinearGradient } from 'expo-linear-gradient';
+import React from 'react';
+import { ActivityIndicator, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 interface PrimaryButtonProps {
   onPress: () => void;
@@ -78,7 +73,7 @@ const getStyles = (colors: AppColors, marginH: number | undefined) =>
       paddingVertical: Spacing.lg,
       paddingHorizontal: Spacing.md,
       borderRadius: BorderRadius.full,
-      alignItems: "center",
+      alignItems: 'center',
       marginBottom: Spacing.sm,
       marginHorizontal: marginH ? marginH : 0,
       ...Shadows.md,

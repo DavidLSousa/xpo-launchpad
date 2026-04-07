@@ -1,9 +1,9 @@
-import { Typography } from "@/src/shared/constants/Typography";
-import { useThemeContext } from "@/src/shared/context";
-import React from "react";
-import { Text } from "react-native";
-import { Colors } from "../constants/Colors";
-import { Spacing } from "../constants/Spacing";
+import { Typography } from '@/src/shared/constants/Typography';
+import { useThemeContext } from '@/src/shared/context';
+import React from 'react';
+import { Text } from 'react-native';
+import { Colors } from '../../constants/Colors';
+import { Spacing } from '../../constants/Spacing';
 
 type Props = {
   text: string;
@@ -20,7 +20,7 @@ const Subtitle: React.FC<Props> = ({ text, center = false, color }) => {
       style={{
         fontSize: Typography.body,
         color: color ? color : colors.text,
-        textAlign: center ? "center" : "left",
+        textAlign: center ? 'center' : 'left',
         marginBottom: Spacing.xxl,
       }}
     >

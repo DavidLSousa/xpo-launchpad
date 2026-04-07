@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { View } from 'react-native';
-import { Spacing } from '../constants';
+import { Spacing } from '../../constants';
 
 export type SectionMainProps = {
   children: ReactNode;

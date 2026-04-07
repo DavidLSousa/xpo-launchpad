@@ -1,13 +1,8 @@
-import {
-  AppColors,
-  BorderRadius,
-  Colors,
-  Spacing,
-} from "@/src/shared/constants";
-import { useThemeContext } from "@/src/shared/context";
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import Modal from "react-native-modal";
+import { AppColors, BorderRadius, Colors, Spacing } from '@/src/shared/constants';
+import { useThemeContext } from '@/src/shared/context';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import Modal from 'react-native-modal';
 
 type Props = {
   isVisible: boolean;
@@ -65,7 +60,7 @@ export default function SlideUpModal({
 const getStyles = (colors: AppColors) =>
   StyleSheet.create({
     modal: {
-      justifyContent: "flex-end",
+      justifyContent: 'flex-end',
       margin: 0,
     },
     content: {
@@ -80,7 +75,7 @@ const getStyles = (colors: AppColors) =>
       height: 4,
       borderRadius: BorderRadius.sm,
       backgroundColor: colors.inputBackgroundDark,
-      alignSelf: "center",
+      alignSelf: 'center',
       marginBottom: Spacing.sm,
     },
   });

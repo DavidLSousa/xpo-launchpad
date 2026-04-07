@@ -10,16 +10,16 @@ export const exampleService = {
       const response = await api.get('/endpoint');
       return response.data;
     } catch (error) {
-       // Error mapping
+      // Error mapping
       throw new Error('Failed to fetch data');
     }
   },
-  
+
   submitData: async (payload: any): Promise<void> => {
     try {
       await api.post('/endpoint', payload);
     } catch (error) {
       throw new Error('Failed to submit data');
     }
-  }
+  },
 };
