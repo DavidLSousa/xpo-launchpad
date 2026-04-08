@@ -1,4 +1,4 @@
-export { default as BasePage } from './layout/BasePage';
+export { default as BaseScreen } from './layout/BaseScreen';
 export { default as Header } from './layout/Header';
 export { default as Footer } from './layout/Footer';
 export { default as SectionMain } from './layout/SectionMain';

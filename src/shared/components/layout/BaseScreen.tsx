@@ -11,7 +11,7 @@ import {
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useThemeContext } from '../../context/useThemeContext';
 
-interface BasePageProps extends ViewProps {
+interface BaseScreenProps extends ViewProps {
   children: React.ReactNode;
   scrollable?: boolean;
   contentContainerStyle?: ScrollViewProps['contentContainerStyle'];
@@ -23,7 +23,7 @@ interface BasePageProps extends ViewProps {
   absoluteHeader?: boolean;
 }
 
-export default function BasePage({
+export default function BaseScreen({
   children,
   scrollable = false,
   contentContainerStyle,
@@ -33,7 +33,7 @@ export default function BasePage({
   absoluteHeader = false,
   style,
   ...props
-}: BasePageProps) {
+}: BaseScreenProps) {
   const { theme } = useThemeContext();
   const colors = Colors[theme];
   const insets = useSafeAreaInsets();

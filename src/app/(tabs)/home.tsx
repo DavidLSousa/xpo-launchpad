@@ -1,4 +1,4 @@
-import { SectionMain, BasePage, Footer, Header, Title } from '@/src/shared/components';
+import { SectionMain, BaseScreen, Footer, Header, Title } from '@/src/shared/components';
 import { AppColors, Colors } from '@/src/shared/constants/Colors';
 import { Spacing } from '@/src/shared/constants/Spacing';
 import { Typography } from '@/src/shared/constants/Typography';
@@ -11,7 +11,7 @@ export default function HomeScreen() {
   const s = styles(colors);
 
   return (
-    <BasePage style={s.safeArea} withBottomInset>
+    <BaseScreen style={s.safeArea} withBottomInset>
       <Header showLogo />
 
       <SectionMain>
@@ -22,7 +22,7 @@ export default function HomeScreen() {
       <Footer>
         <View />
       </Footer>
-    </BasePage>
+    </BaseScreen>
   );
 }
 

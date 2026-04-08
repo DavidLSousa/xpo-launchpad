@@ -1,4 +1,4 @@
-import { BasePage, Footer, Header, Title } from '@/src/shared/components';
+import { BaseScreen, Footer, Header, Title } from '@/src/shared/components';
 import { AppColors, Colors } from '@/src/shared/constants/Colors';
 import { Spacing } from '@/src/shared/constants/Spacing';
 import { Typography } from '@/src/shared/constants/Typography';
@@ -12,7 +12,7 @@ export default function MoreScreen() {
   const s = styles(colors);
 
   return (
-    <BasePage style={s.safeArea} withBottomInset>
+    <BaseScreen style={s.safeArea} withBottomInset>
       <Header showLogo />
 
       <View style={s.mainContent}>
@@ -23,7 +23,7 @@ export default function MoreScreen() {
       <Footer>
         <View />
       </Footer>
-    </BasePage>
+    </BaseScreen>
   );
 }
 
