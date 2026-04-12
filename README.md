@@ -84,16 +84,17 @@ make remove PKG=x   # Remover dependência (yarn remove x)
 make audit-fix      # Analisa possíveis furos de vulnerabilidade das libs.
 ```
 
-### O Fluxo de Build Profissional e Versionamento (Sem Mover as Mãos)
+### O Fluxo de Build Profissional e Versionamento (XPO CLI)
 
-Um dos diferenciais é lidar com as tags e build numbers (Android versionCode/ iOS buildNumber).
-Quer aumentar a versão (`1.0.0` para `1.0.1`) e gerar uma submissão para a Google Play de uma vez?
+Em vez de scripts enormes no Makefile, adotamos por padrão em nossa arquitetura a **XPO CLI** ([github.com/DavidLSousa/xpo](https://github.com/DavidLSousa/xpo)). Ela abstrai toda a orquestração complexa de builds com o EAS.
+
+Quer aumentar a versão (`1.0.0` para `1.0.1`), cuidar do buildNumber/versionCode do `app.json` com backup automático e submeter para as Lojas (ou gerar um APK local) em um único comando blindado de erros?
 
 ```bash
-make build-android VERSION=patch  # Ou 'minor' / 'major'
+xpo build android --local --profile production --bump patch
 ```
 
-O sistema altera inteligentemente o `app.json`, executa back-ups automáticos em caso de quebra, engatilha o servidor do **EAS Build** localmente/remotamente, e joga a batata nas nuvens, permitindo focar em programar, não em implantação!
+O sistema altera e salva preventivamente o `app.json`, orquestra credenciais críticas da Apple/Google e engatilha o servidor do **EAS Build** de forma fluida, limpa e visando seu DevEx!
 
 ---
 
