@@ -3,13 +3,13 @@
   <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" />
-  <h1>🚀 Template Expo Master</h1>
+  <h1>🚀 Expo Launchpad</h1>
   <p><strong>A fundação definitiva para seus próximos aplicativos de sucesso.</strong></p>
 </div>
 
 ---
 
-Bem-vindo ao **Template Expo Master**, um esqueleto arquitetural projetado milimetricamente para resolver o maior problema do desenvolvimento de software móvel: _a dívida técnica prematura_.
+Bem-vindo ao **Expo Launchpad**, um esqueleto arquitetural projetado milimetricamente para resolver o maior problema do desenvolvimento de software móvel: _a dívida técnica prematura_.
 
 Nós desenhamos este template para dois mundos:
 
