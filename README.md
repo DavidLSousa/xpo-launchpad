@@ -101,3 +101,17 @@ O sistema altera e salva preventivamente o `app.json`, orquestra credenciais cr�
 <br />
 
 > _Explore os arquivos e templates em `/docs` ou `/modules` para maiores orientações sob os fluxos internos. O palco está montado, hora do show!_ 🎸
+
+---
+
+## 🛠️ Projeto em Evolução
+
+Este **não é** uma verdade absoluta — é um desenvolvedor tentando ajudar outros devs a começarem com uma base mais sólida.
+
+A arquitetura aqui descrita é opinionada e nasceu de experiência prática, mas pode (e deve!) ser adaptada à sua realidade. Se você encontrar algo para melhorar, discordar de alguma decisão arquitetural ou quiser sugerir mudanças, **contribuições são muito bem-vindas!**
+
+- 🐛 [Abra uma issue](https://github.com/DavidLSousa/expo-launchpad/issues) para reportar problemas ou sugestões
+- 🔀 Submeta um **Pull Request** com sua melhoria
+- ⭐ Dê uma estrela se o projeto te ajudou!
+
+> _Construído com 💜 por [David Sousa](https://github.com/DavidLSousa) — Open Source MIT._
