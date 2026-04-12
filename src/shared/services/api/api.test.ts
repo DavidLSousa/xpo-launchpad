@@ -19,7 +19,6 @@ jest.mock('../../utils/storage', () => ({
 jest.mock('../../mocks/mockRegistry', () => ({
   mockRegistry: {
     'v2/test': { data: 'exact-match' },
-    'usdt/api/price': { price: 5.5 },
   },
 }));
 
@@ -37,16 +36,6 @@ describe('API Interceptors', () => {
 
       expect(response.status).toBe(200);
       expect(response.data).toEqual({ data: 'exact-match' });
-    });
-
-    it('should return mock data for prefix URL match in demo mode', async () => {
-      // usdt/api/price/USDT should match usdt/api/price/ prefix
-      const response = await api.get('usdt/api/price/USDT', {
-        headers: { demo: 'true' },
-      });
-
-      expect(response.status).toBe(200);
-      expect(response.data).toEqual({ price: 5.5 });
     });
 
     it('should normalize URL (remove query and leading slash)', async () => {

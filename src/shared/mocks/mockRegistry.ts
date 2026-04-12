@@ -1,7 +1,15 @@
 import MockAdapter from 'axios-mock-adapter';
-import api from '@/src/shared/services/api/api';
+import { api } from '@/src/shared/services/api/api';
 
 type MockHandler = (mock: MockAdapter) => void;
+
+/**
+ * Registro de dados estáticos para o Centralized Mocking (isDemo).
+ * Mapeia caminhos de URL para objetos de dados.
+ */
+export const mockRegistry: Record<string, any> = {
+  // Exemplo: 'auth/login': { token: 'mock-token' }
+};
 
 const registry: MockHandler[] = [];
 
