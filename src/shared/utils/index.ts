@@ -12,3 +12,4 @@ export * from './storage';
 export * from './storageKeys';
 export * from './totp';
 export * from './validates';
+export * from './logger';
