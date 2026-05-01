@@ -114,6 +114,26 @@ O sistema altera e salva preventivamente o `app.json`, orquestra credenciais cr�
 
 ---
 
+## 🛡️ Segurança e Boas Práticas
+
+Para garantir que seu aplicativo seja não apenas escalável, mas também seguro, seguimos e recomendamos alguns padrões:
+
+### 1. O uso consciente de `__DEV__`
+
+O `__DEV__` é uma constante global do React Native que permite isolar comportamentos exclusivos de desenvolvimento (como nosso **Smart Logger** ou Mocks de API).
+
+- **Recomendação**: Use para evitar que logs pesados ou ferramentas de debug afetem a performance do usuário final.
+- **Atenção**: O `__DEV__` **não é uma bala de prata**. Dados sensíveis hardcoded dentro de um bloco `if (__DEV__)` ainda podem estar presentes no bundle final se o compilador não realizar o tree-shaking corretamente. Nunca coloque segredos de API ou chaves privadas diretamente no código.
+
+### 2. `useRef` para Informações Sensíveis
+
+Ao lidar com entradas de dados sensíveis (senhas, tokens de MFA, PINs), evite o uso excessivo de `useState`.
+
+- **Por que?**: O estado do React é facilmente rastreável por ferramentas de debug (React DevTools) e cada alteração gera uma re-renderização que pode expor o dado na memória de forma mais persistente.
+- **Padrão Launchpad**: Recomendamos capturar esses dados via `useRef`. Isso mantém a informação "silenciosa", fora da árvore de renderização e mais difícil de ser capturada por ferramentas de inspeção de UI de terceiros.
+
+---
+
 <br />
 
 > _Explore os arquivos e templates em `/docs` ou `/modules` para maiores orientações sob os fluxos internos. O palco está montado, hora do show!_ 🎸
